@@ -21,10 +21,21 @@ function calculateAverage(){
 }
 
 function assignGrade(){
-
-}
+ for(let i=0;i<students.length;i++){
+    if(result[i].average >= 80){
+      console.log(`${result[i].name} has an A grade`);
+    }
+    else if(result[i].average >= 60 && result[i].average < 80){
+      console.log(`${result[i].name} has a B grade`);
+    }
+    
+    else if(result[i].average < 60){
+      console.log(`${result[i].name} has a C grade`);
+    }
+}}
 function generateReports(){
 
 }
 let result=calculateAverage();
 console.log(result);
+assignGrade();
