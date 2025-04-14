@@ -8,14 +8,11 @@ console.log(students);
 function calculateAverage(){
   
   for(let i=0;i<students.length;i++){
-      let sum=0;
-      for(let j=0;j<students[i].score.length;j++){
-        sum+=students[i].score[j];
-      }
-      let avg=sum/students[i].score.length;
+    let sum = students[i].score.reduce((acc, score) => acc + score, 0);
+    let avg = sum / students[i].score.length;
     console.log(`Average score of ${students[i].name} is ${avg}`);
-  };
   }
+}
 function generateReports(){
 
 }
