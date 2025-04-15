@@ -21,8 +21,11 @@ function calculateAverage() {
 }
 
 function assignGrade() {
-  for (let i = 0; i < result.length; i++) {
-    if (result[i].average >= 80) {
+  for (let i = 0; i < result.length; i++) // O(n) since we iterate over the result array
+  {
+    //O(1) since we are checking a constant condition
+    if (result[i].average >= 80)
+    {
       result[i].grade = 'A';
     } else if (result[i].average >= 60 && result[i].average < 80) {
       result[i].grade = 'B';
@@ -30,6 +33,7 @@ function assignGrade() {
       result[i].grade = 'C';
     }
   }
+  //Overall time complexity: O(n) since we have a single loop
 }
 
 let result = calculateAverage();
