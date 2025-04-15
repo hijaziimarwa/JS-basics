@@ -28,8 +28,8 @@ class BankAccount{
         }
     }
     getSummary(){
-        console.log(`Account owner: ${this.ownerName}`);
-        console.log(`Current balance: ${this.balance}`);
+        return `Account owner: ${this.ownerName}, Balance: ${this.balance}`;
+
     }
 
 
@@ -37,3 +37,10 @@ class BankAccount{
 
 const account1 = new BankAccount('Alice', 1000);
 const account2 = new BankAccount('Bob', 500);
+console.log(account1.getSummary());
+console.log(account2.getSummary());
+account1.deposit(200);
+account1.withdraw(100);
+account1.transfer(300, account2);
+console.log(account1.getSummary());
+console.log(account2.getSummary());
