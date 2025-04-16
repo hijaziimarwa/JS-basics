@@ -6,7 +6,12 @@ const taskList = document.querySelector('.taskList')
 
 
 
+addTaskButton.addEventListener('click', function() {
+    const task = taskInput.value;
+    console.log(task);
 
+
+})
 
 
 

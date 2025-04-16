@@ -39,3 +39,5 @@ function assignGrade() {
 let result = calculateAverage();
 assignGrade();
 console.log(result);
+
+//overall time complexity: O(n^2) 
